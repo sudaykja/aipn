@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+<!---Services with Images and Links---->
+
+{% block content %}
+{% load static %}
+
+<div class = "images">
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="" href="">
+      <img src="{% static 'images/Student.png' %}" alt="Student Support" width="360" height="240">
+    </a>
+    <div class="desc">Support to CFA Students</div>
+  </div>
+</div>
+
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="" href="">
+      <img src="{% static "images/Members.png" %}" alt="Become a Member" width="360" height="240">
+    </a>
+    <div class="desc">Become a Member of AIPN</div>
+  </div>
+  <!--<div class="desc">If you want to have a long description without affecting image responsiveness, go for this</div>-->
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="" href="">
+      <img src="{% static "images/Market.png" %}" alt="Support to Investment Community" width="360" height="240">
+    </a>
+    <div class="desc">Support to Investment Community</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="" href="">
+      <img src="{% static "images/icon_partner.png" %}" alt="Collborate with us" width="360" height="240">
+    </a>
+    <div class="desc">Work in Collaboration with us</div>
+  </div>
+</div>
+
+<div class="clearfix"></div>
+
+</div>
+
+{% endblock %}

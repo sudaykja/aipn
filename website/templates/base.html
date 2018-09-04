@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+{% load static %}  
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<meta charset="utf-8">
+
+{% block title %}<title>AIPN</title>{% endblock %}
+<!-- Title Image -->
+<link rel="icon" href="{% static 'images/Market2.png' %}"/>
+
+<!-- For Responsiveness -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Styling with CSS -->
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+
+</head>
+
+
+<body>
+
+<!---Top Header - Logo & Social Media Buttons---->
+{% block logobar %}
+<div class="row top">
+	<div class="col-4">  
+		<a href="{% url 'index' %}"><img src="{% static "images/logo.jpg" %}" alt="AIPN" width="350px" height="75px" class="logo"></a>
+	</div>
+	
+	<div class="col-4">  	
+	</div>
+		
+	<div class="col-4">  
+		<ul class="social">
+			<li><a href="https://www.facebook.com" target="_blank"><img src={% static "images/facebook.png" %} alt="facebook" width="30px" height="30px"></a></li>
+			<li><a href="news.asp" target="_blank"><img src="{% static "images/twitter.png" %}" alt="twitter" width="30px" height="30px"></a></li>
+			<li><a href="contact.asp" target="_blank"><img src="{% static "images/linkedin.png" %}" alt="linkedin" width="30px" height="30px"></a></li>
+			<li><a href="about.asp" target="_blank"><img src="{% static "images/youtube.png" %}" alt="youtube" width="30px" height="30px"></a></li>
+		</ul>
+	</div>
+</div>
+{% endblock %}
+
+
+<!---Menu---->
+{% block menu %}
+<div class="row menubar">
+<div class="topnav" id="myTopnav">  
+<div class="col-12">
+<div class="navbar">
+  <a href="{% url 'index' %}">Home</a>
+  
+  <div class="dropdown">
+    <button class="dropbtn"> About Us
+		<i class="fa fa-caret-down"></i>
+	</button>
+    <div class="dropdown-content">
+      <a href="{% url 'about_aipn' %}">About AIPN</a>
+      <a href="{% url 'mission' %}">Mission and Vision</a>
+      <a href="#">Board of Directors</a>
+	  <a href="#">Steering Committee</a>
+      <a href="#">About CFA</a>
+    </div>
+  </div> 
+  
+  <div class="dropdown">
+    <button class="dropbtn">Services 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Student Services</a>
+      <a href="#">Members Services</a>
+      <a href="#">Research and Analysis</a>
+	  <a href="#">Advisory</a>
+    </div>
+  </div> 
+  
+  <div class="dropdown">
+    <button class="dropbtn">Dropdown 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+    </div>
+  </div>
+
+  <a href="#home">Learning Resources</a>
+  
+  <a href="#home">News and Events</a>
+  
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+  <i class="fa fa-bars"></i>
+  </a>
+ 
+  <a class="active" style="float:right; font-size: 18px; font-weight: bold;" href="#news">Contact Us</a>
+
+  </div>
+  </div>
+</div>
+</div>
+{% endblock %}
+
+{% block content %}
+
+{% endblock %}
+
+<!---Footer with Contact and Copyright Notice---->
+{% block footer %}
+<div class="row">
+	<div class="footer">
+	<p>
+	<!--<span class="aipn">Contact</span><br>-->
+	<span class= "contact">
+	<img src="{% static "images/address.png" %}" alt="Address" width="30px" height="30px"> : 
+	Kathmandu, Nepal</span>
+	<span class = "contact"><img src="{% static "images/phone.png" %}" alt="Phone" width="20px" height="20px"> : 01-55667788; 985101234</span>
+	<span class = "contact"><img src="{% static "images/email.png" %}" alt="Email" width="20px" height="20px"> : info@aipn.com.np</span>
+	</p>
+</div>
+
+<div class="row cright">
+	
+	<div class="copyright">
+	<br>
+	<span>© 2018 Association of Investment Professionals of Nepal. All Rights Reserved.</span>
+	<!--<br><span>Developed by iSolutions</span>-->
+	</div>
+	
+</div>
+{% endblock %}
+
+<script>
+/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " menuresponsive";
+		x.className += " active";
+    } else {
+        x.className = "topnav";
+    }
+}
+</script>
+
+</body>
+</html>
